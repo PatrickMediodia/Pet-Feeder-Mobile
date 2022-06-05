@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Pet_Feeder_Machine_Problem</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- dashboard placholders -->
+    <string name="temp_placeholder">--.--C</string>
+    <string name="hum_placeholder">--.--%</string>
+    <string name="food_placeholder">Level</string>
+    <string name="water_placeholder">Level</string>
+    <string name="time_placeholder">Time</string>
+
+    <!-- Button strings-->
+    <string name="dispense_button">Dispense</string>
+</resources>

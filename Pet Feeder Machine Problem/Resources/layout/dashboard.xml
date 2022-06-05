@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:text="@string/temp_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/temperatureTxt" />
+
+    <TextView
+        android:text="@string/hum_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/humidityTxt" />
+
+    <TextView
+        android:text="@string/food_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodTxt" />
+
+    <TextView
+        android:text="@string/water_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/waterTxt" />
+
+    <TextView
+        android:text="@string/time_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timestampTxt" />
+
+    <Button
+        android:text="@string/dispense_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:height="60dp"
+        android:id="@+id/dispenseBtn"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#1B7777" 
+        android:textColor="#ffffff"/>
+
+</LinearLayout>
