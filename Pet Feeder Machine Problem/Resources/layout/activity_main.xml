@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFEFD5"
+    android:background="@drawable/turquoisebg"
     android:gravity="center">
     
     <ImageView
@@ -22,12 +22,13 @@
         android:id="@+id/imageView1" />
 
     <ImageView
-        android:src="@drawable/petfeedertitle"
+        android:src="@drawable/titlewhite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:maxHeight="100dp"
         android:maxWidth="250dp"
+        android:layout_marginBottom="10dp"
         android:scaleType="fitCenter"
         android:id="@+id/imageView1" />
 
@@ -38,8 +39,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         app:boxBackgroundColor="#ffffff"
-        app:boxStrokeColor="#808080"
+        app:boxStrokeColor="#00CED1"
         android:layout_marginEnd="20dp"
+        android:textColorHint="#708090"
         android:hint="Enter Username">
  
         <com.google.android.material.textfield.TextInputEditText
@@ -56,10 +58,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         app:boxBackgroundColor="#ffffff"
-        app:boxStrokeColor="#808080"
+        app:boxStrokeColor="#00CED1"
+        android:textColorHint="#708090"
         android:hint="Enter Password">
  
         <com.google.android.material.textfield.TextInputEditText
