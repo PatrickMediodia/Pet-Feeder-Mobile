@@ -21,7 +21,7 @@ namespace Pet_Feeder_Machine_Problem
     public class Dashboard : Activity
     {
         TextView temperatureTxt, humidityTxt, foodTxt, waterTxt, timestampTxt;
-        Button dispeseBtn;
+        Button dispeseBtn, dispenseLogBtn;
         HttpClient client;
         public Timer RefreshDataTimer;
 
@@ -37,10 +37,12 @@ namespace Pet_Feeder_Machine_Problem
             foodTxt = FindViewById<TextView>(Resource.Id.foodTxt);
             waterTxt = FindViewById<TextView>(Resource.Id.waterTxt);
             timestampTxt = FindViewById<TextView>(Resource.Id.timestampTxt);
-
+            
             dispeseBtn = FindViewById<Button>(Resource.Id.dispenseBtn);
+            dispenseLogBtn = FindViewById<Button>(Resource.Id.btnDispenseLog);
 
-            RunOnUiThread(async () => {
+            /*RunOnUiThread(async () =>
+            {
                 await UpdateStatus();
             });
 
@@ -49,8 +51,14 @@ namespace Pet_Feeder_Machine_Problem
             RefreshDataTimer.AutoReset = true;
             RefreshDataTimer.Enabled = true;
 
-            dispeseBtn.Click += async (sender, e) => {
+            dispeseBtn.Click += async (sender, e) =>
+            {
                 await ManualDispense(sender, e);
+            };*/
+
+            dispenseLogBtn.Click += async (sender, e) =>
+            {
+                await DispenseLog(sender, e);
             };
         }
 
@@ -101,6 +109,14 @@ namespace Pet_Feeder_Machine_Problem
             {
                 Toast.MakeText(this, "Error", ToastLength.Long).Show();
             }
+        }
+
+        public async Task DispenseLog(object source, EventArgs e)
+        {
+            Intent i = new Intent(this, typeof(DispenseLog));
+            string username = Intent.GetStringExtra("username");
+            i.PutExtra("username", username);
+            StartActivity(i);
         }
     }
 }
