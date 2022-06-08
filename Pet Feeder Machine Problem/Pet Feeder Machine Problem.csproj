@@ -173,7 +173,7 @@
     <AndroidResource Include="Resources\drawable\manualDispenserTitle.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\dispense.xml" />
+    <AndroidResource Include="Resources\layout\disspense.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions />

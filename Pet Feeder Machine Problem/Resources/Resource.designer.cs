@@ -14,7 +14,7 @@ namespace Pet_Feeder_Machine_Problem
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.3.0.26")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.1.0.11")]
 	public partial class Resource
 	{
 		
@@ -4467,10 +4467,10 @@ namespace Pet_Feeder_Machine_Problem
 			public const int design_text_input_password_icon = 2131427374;
 			
 			// aapt resource value: 0x7F0B002F
-			public const int dispense = 2131427375;
+			public const int dispenseLog = 2131427375;
 			
 			// aapt resource value: 0x7F0B0030
-			public const int dispenseLog = 2131427376;
+			public const int disspense = 2131427376;
 			
 			// aapt resource value: 0x7F0B0031
 			public const int mtrl_layout_snackbar = 2131427377;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,92 +8,90 @@
     android:layout_height="match_parent"
     android:background="@drawable/turquoisebg">
 
-    <ImageView
+	<ImageView
        android:src="@drawable/manualDispenserTitle"
-       android:layout_width="wrap_content"
+       android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:adjustViewBounds="true"
        android:maxHeight="200dp"
        android:maxWidth="250dp"
        android:layout_marginTop="20dp"
+       android:layout_marginLeft="30dp"
+       android:layout_marginRight="30dp"
        android:scaleType="fitCenter"
        android:layout_gravity="center_horizontal"
        android:id="@+id/imageView1" />
 
-    <ScrollView
+	<LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-        <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:gravity="center"
-           android:orientation="vertical">
+		<TextView
+            android:text="Number of Servings:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="15dp"
+            android:textColor="#FFF"
+            android:id="@+id/numServingsLbl" />
 
-            <TextView
-                android:text="Number of Servings:"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15dp"
-                android:textColor="#FFF"
-                android:id="@+id/numServingsLbl" />
+		<EditText
+            android:id="@+id/servingsTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:padding="11dp"
+            android:maxLines="1"
+            android:maxLength="64"
+            android:textSize="15sp"
+            android:inputType="number"
+            android:hint="Enter number of servings here"
+            android:background="@drawable/edittextstyle"/>
 
-            <EditText
-                android:id="@+id/servingsTxt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:padding="11dp"
-                android:maxLines="1"
-                android:maxLength="64"
-                android:textSize="15sp"
-                android:inputType="number"
-                android:hint="Enter number of servings here"
-                android:background="@drawable/edittextstyle"/>
+		<TextView
+            android:text="Current Time and Date:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="15dp"
+            android:textColor="#FFF"
+            android:id="@+id/dateTimeLbl" />
 
-            <TextView
-                android:text="Current Time and Date:"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="15dp"
-                android:textColor="#FFF"
-                android:id="@+id/dateTimeLbl" />
+		<TextView
+            android:text="@string/time_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#FFB74D"
+            android:fontFamily="serif-monospace"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/timestampTxt" />
 
-            <TextView
-               android:text="@string/time_placeholder"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:textSize="25dp"
-               android:textStyle="bold"
-               android:textColor="#FFB74D"
-               android:fontFamily="serif-monospace"
-               android:layout_marginRight="30dp"
-               android:layout_marginLeft="30dp"
-               android:layout_marginTop="10dp"
-               android:layout_marginBottom="20dp"
-               android:id="@+id/timestampTxt" />
+		<Button
+            android:text="@string/dispense_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonstyle"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginTop="25dp"
+            android:id="@+id/dispenseBtn"
+            android:textSize="18dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@android:color/white"/>
 
-            <Button
-                android:text="@string/dispense_button"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/buttonstyle"
-                android:fontFamily="sans-serif-condensed"
-                android:layout_marginTop="30dp"
-                android:id="@+id/dispenseBtn"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="30dp"
-                android:textColor="@android:color/white"/>
-
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>
