@@ -60,11 +60,9 @@ namespace Pet_Feeder_Machine_Problem
             };*/
 
             recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView1);
-            dispenseLogBtn.Click += this.DispenseLog;
-
+            
             dispenseLogBtn.Click += DispenseLog;
             dispeseBtn.Click += ManualDispense;
-            };
         }
 
         private async void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -104,6 +102,7 @@ namespace Pet_Feeder_Machine_Problem
         }
 
         public void DispenseLog(object source, EventArgs e)
+        {
             /*Intent i = new Intent(this, typeof(DispenseLog));
             string username = Intent.GetStringExtra("username");
             i.PutExtra("username", username);
@@ -123,7 +122,7 @@ namespace Pet_Feeder_Machine_Problem
 
         private void SetUpRecyclerView()
         {
-            StartActivity(i);
+            
         }
     }
 }
