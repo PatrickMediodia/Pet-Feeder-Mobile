@@ -41,7 +41,7 @@ namespace Pet_Feeder_Machine_Problem
             dispeseBtn = FindViewById<Button>(Resource.Id.dispenseBtn);
             dispenseLogBtn = FindViewById<Button>(Resource.Id.btnDispenseLog);
 
-            /*RunOnUiThread(async () =>
+            RunOnUiThread(async () =>
             {
                 await UpdateStatus();
             });
@@ -54,7 +54,7 @@ namespace Pet_Feeder_Machine_Problem
             dispeseBtn.Click += async (sender, e) =>
             {
                 await ManualDispense(sender, e);
-            };*/
+            };
 
             dispenseLogBtn.Click += async (sender, e) =>
             {
