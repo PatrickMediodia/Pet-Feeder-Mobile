@@ -2,6 +2,7 @@
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
@@ -24,7 +25,7 @@ namespace Pet_Feeder_Machine_Problem
         Button dispeseBtn, dispenseLogBtn, addSlotBtn;
         HttpClient client;
         public Timer RefreshDataTimer;
-
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -42,7 +43,7 @@ namespace Pet_Feeder_Machine_Problem
             dispenseLogBtn = FindViewById<Button>(Resource.Id.btnDispenseLog);
             addSlotBtn = FindViewById<Button>(Resource.Id.btnAddSlot);
 
-            RunOnUiThread(async () =>
+            /*RunOnUiThread(async () =>
             {
                 await UpdateStatus();
             });
@@ -51,6 +52,11 @@ namespace Pet_Feeder_Machine_Problem
             RefreshDataTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
             RefreshDataTimer.AutoReset = true;
             RefreshDataTimer.Enabled = true;
+
+            dispeseBtn.Click += async (sender, e) =>
+            {
+                await ManualDispense(sender, e);
+            };*/
 
             dispenseLogBtn.Click += DispenseLog;
             dispeseBtn.Click += ManualDispense;
@@ -95,7 +101,9 @@ namespace Pet_Feeder_Machine_Problem
 
         public void DispenseLog(object source, EventArgs e)
         {
-            Intent i = new Intent(this, typeof(DispenseLog));
+            Intent i = new Intent(this, typeof(DispenseLogActivity));
+            string username = Intent.GetStringExtra("username");
+            i.PutExtra("username", username);
             StartActivity(i);
         }
 

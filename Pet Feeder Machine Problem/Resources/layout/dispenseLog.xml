@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
+
     <TextView
         android:text="Dispense Log"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -12,5 +13,55 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/textView1" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginRight="10px"
+            android:id="@+id/tvTime" />
+
+        <TextView
+            android:text="Temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginRight="10px"
+            android:id="@+id/tvTemp" />
+
+        <TextView
+            android:text="Humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginRight="10px"
+            android:id="@+id/tvHum" />
+
+        <TextView
+            android:text="Serving"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginRight="10px"
+            android:id="@+id/tvServ" />
+
+        <TextView
+            android:text="Mode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginRight="10px"
+            android:id="@+id/tvMode" />
+    </LinearLayout>
 
 </LinearLayout>

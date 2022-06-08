@@ -29,7 +29,7 @@ namespace Pet_Feeder_Machine_Problem
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Create your application here
-            SetContentView(Resource.Layout.dispense);
+            SetContentView(Resource.Layout.Dispense);
 
             dispenseManualBtn = FindViewById<Button>(Resource.Id.dispenseBtn);
             timeTxt = FindViewById<TextView>(Resource.Id.timestampTxt);

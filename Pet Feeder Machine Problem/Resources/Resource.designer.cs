@@ -14,7 +14,7 @@ namespace Pet_Feeder_Machine_Problem
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.1.0.11")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.3.0.26")]
 	public partial class Resource
 	{
 		
@@ -3912,7 +3912,7 @@ namespace Pet_Feeder_Machine_Problem
 			public const int progress_horizontal = 2131230884;
 			
 			// aapt resource value: 0x7F0800A5
-			public const int radio = 2131230885;
+			public const int recyclerView1 = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
 			public const int right = 2131230886;
@@ -3988,6 +3988,9 @@ namespace Pet_Feeder_Machine_Problem
 			
 			// aapt resource value: 0x7F080004
 			public const int SHIFT = 2131230724;
+			
+			// aapt resource value: 0x7F0800BD
+			public const int shortcut = 2131230909;
 			
 			// aapt resource value: 0x7F0800BE
 			public const int shortcut = 2131230910;
@@ -4179,16 +4182,16 @@ namespace Pet_Feeder_Machine_Problem
 			public const int transition_transform = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int @unchecked = 2131230972;
+			public const int tvMode = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int uniform = 2131230973;
+			public const int tvServ = 2131230973;
 			
 			// aapt resource value: 0x7F0800FE
-			public const int unlabeled = 2131230974;
+			public const int tvTemp = 2131230974;
 			
 			// aapt resource value: 0x7F0800FF
-			public const int up = 2131230975;
+			public const int tvTime = 2131230975;
 			
 			// aapt resource value: 0x7F080100
 			public const int useLogo = 2131230976;
@@ -4482,7 +4485,7 @@ namespace Pet_Feeder_Machine_Problem
 			public const int dispense = 2131427376;
 			
 			// aapt resource value: 0x7F0B0031
-			public const int dispenseLog = 2131427377;
+			public const int dispenseLogActivity = 2131427377;
 			
 			// aapt resource value: 0x7F0B0032
 			public const int mtrl_layout_snackbar = 2131427378;

@@ -65,6 +65,8 @@
     <Compile Include="AddSlots.cs" />
     <Compile Include="Dispense.cs" />
     <Compile Include="DispenseLog.cs" />
+    <Compile Include="Adapters\RecyclerViewAdapter.cs" />
+    <Compile Include="DispenseLogActivity.cs" />
     <Compile Include="RESTAPI.cs" />
     <Compile Include="Dashboard.cs" />
     <Compile Include="MainActivity.cs" />
@@ -174,7 +176,12 @@
     <AndroidResource Include="Resources\drawable\manualDispenserTitle.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\dispense.xml" />
+    <AndroidResource Include="Resources\layout\Dispense.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\dispenseLogActivity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\addslots.xml" />

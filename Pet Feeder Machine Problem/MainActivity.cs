@@ -2,9 +2,12 @@
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.Widget;
 using Android.Widget;
 using AndroidX.AppCompat.App;
+using Pet_Feeder_Machine_Problem.Models;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -33,6 +36,7 @@ namespace Pet_Feeder_Machine_Problem
             loginBtn.Click += async (sender, e) => {
                 await Login(sender, e);
             };
+
         }
 
         public async Task Login(object sender, EventArgs e)

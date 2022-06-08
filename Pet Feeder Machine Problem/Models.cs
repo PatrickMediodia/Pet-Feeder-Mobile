@@ -19,4 +19,13 @@ namespace Pet_Feeder_Machine_Problem.Models
         public string waterLevel { get; set; }
         public string timestamp { get; set; }
     }
+
+    public class LogRecord
+    {
+        public string time { get; set; }
+        public string temperature { get; set; }
+        public string humidity { get; set; }
+        public string serving { get; set; }
+        public string mode { get; set; }
+    }
 }
