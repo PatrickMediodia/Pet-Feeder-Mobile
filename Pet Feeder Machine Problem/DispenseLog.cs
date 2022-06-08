@@ -26,7 +26,7 @@ namespace Pet_Feeder_Machine_Problem
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            SetContentView(Resource.Layout.dispenseLogActivity);
+            SetContentView(Resource.Layout.dispenseLog);
 
             
         }

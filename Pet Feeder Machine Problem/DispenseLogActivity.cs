@@ -28,7 +28,7 @@ namespace Pet_Feeder_Machine_Problem
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            SetContentView(Resource.Layout.dispenseLog);
+            SetContentView(Resource.Layout.dispenseLogActivity);
             
             recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView1);
 
