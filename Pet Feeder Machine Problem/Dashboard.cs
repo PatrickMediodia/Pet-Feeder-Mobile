@@ -51,15 +51,8 @@ namespace Pet_Feeder_Machine_Problem
             RefreshDataTimer.AutoReset = true;
             RefreshDataTimer.Enabled = true;
 
-            dispeseBtn.Click += async (sender, e) =>
-            {
-                await ManualDispense(sender, e);
-            };
-
-            dispenseLogBtn.Click += async (sender, e) =>
-            {
-                await DispenseLog(sender, e);
-            };
+            dispenseLogBtn.Click += DispenseLog;
+            dispeseBtn.Click += ManualDispense;
         }
 
         private async void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -92,30 +85,15 @@ namespace Pet_Feeder_Machine_Problem
             }
         }
 
-        public async Task ManualDispense(object source, EventArgs e)
+        public void ManualDispense(object source, EventArgs e)
         {
-            client = new HttpClient();
-
-            string url = RESTAPI.url() + $"dispenseFood.php";
-
-            HttpResponseMessage response = await client.GetAsync(url);
-
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                var result = await response.Content.ReadAsStringAsync();
-                Toast.MakeText(this, result, ToastLength.Long).Show();
-            }
-            else
-            {
-                Toast.MakeText(this, "Error", ToastLength.Long).Show();
-            }
+            Intent i = new Intent(this, typeof(Dispense));
+            StartActivity(i);
         }
 
-        public async Task DispenseLog(object source, EventArgs e)
+        public void DispenseLog(object source, EventArgs e)
         {
             Intent i = new Intent(this, typeof(DispenseLog));
-            string username = Intent.GetStringExtra("username");
-            i.PutExtra("username", username);
             StartActivity(i);
         }
     }

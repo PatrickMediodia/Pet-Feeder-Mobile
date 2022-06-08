@@ -20,18 +20,20 @@ namespace Pet_Feeder_Machine_Problem
     public class Dispense : Activity
     {
         TextView timeTxt;
+        EditText servingsTxt;
         Button dispenseManualBtn;
         HttpClient client;
-   
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Create your application here
-            SetContentView(Resource.Layout.Dispense);
+            SetContentView(Resource.Layout.dispense);
 
             dispenseManualBtn = FindViewById<Button>(Resource.Id.dispenseBtn);
             timeTxt = FindViewById<TextView>(Resource.Id.timestampTxt);
+            servingsTxt = FindViewById<EditText>(Resource.Id.servingsTxt);
 
             dispenseManualBtn.Click += async (sender, e) => {
                 await ManualDispense(sender, e);
@@ -41,10 +43,8 @@ namespace Pet_Feeder_Machine_Problem
             timer.Elapsed += TimerElapsed;
             timer.AutoReset = true;
             timer.Start();
-
-            
         }
-        private void TimerElapsed(Object source, ElapsedEventArgs e)
+        private void TimerElapsed(object source, ElapsedEventArgs e)
         {
             timeTxt.Text = e.SignalTime.ToString();
         }
@@ -53,7 +53,8 @@ namespace Pet_Feeder_Machine_Problem
         {
             client = new HttpClient();
 
-            string url = RESTAPI.url() + $"dispenseFood.php";
+            string servings = servingsTxt.Text;
+            string url = RESTAPI.url() + $"dispenseFood.php?serving={servings}";
 
             HttpResponseMessage response = await client.GetAsync(url);
 
