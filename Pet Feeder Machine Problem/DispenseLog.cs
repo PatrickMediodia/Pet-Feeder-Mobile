@@ -21,12 +21,14 @@ namespace Pet_Feeder_Machine_Problem
     [Activity(Label = "Dispense Log", Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
     public class DispenseLog : Activity
     {
-
+     
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            SetContentView(Resource.Layout.dispenseLog);
+            SetContentView(Resource.Layout.dispenseLogActivity);
+
+            
         }
     }
 }
