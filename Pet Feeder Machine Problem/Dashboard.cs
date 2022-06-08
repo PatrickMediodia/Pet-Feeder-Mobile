@@ -2,6 +2,7 @@
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
@@ -24,6 +25,8 @@ namespace Pet_Feeder_Machine_Problem
         Button dispeseBtn, dispenseLogBtn;
         HttpClient client;
         public Timer RefreshDataTimer;
+        RecyclerView recyclerView;
+        List<LogRecord> logRecords;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -56,10 +59,9 @@ namespace Pet_Feeder_Machine_Problem
                 await ManualDispense(sender, e);
             };*/
 
-            dispenseLogBtn.Click += async (sender, e) =>
-            {
-                await DispenseLog(sender, e);
-            };
+            recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView1);
+            dispenseLogBtn.Click += this.DispenseLog;
+
         }
 
         private async void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -111,12 +113,27 @@ namespace Pet_Feeder_Machine_Problem
             }
         }
 
-        public async Task DispenseLog(object source, EventArgs e)
+        public void DispenseLog(object source, EventArgs e)
         {
-            Intent i = new Intent(this, typeof(DispenseLog));
+            /*Intent i = new Intent(this, typeof(DispenseLog));
             string username = Intent.GetStringExtra("username");
             i.PutExtra("username", username);
-            StartActivity(i);
+            StartActivity(i);*/
+
+            logRecords = new List<LogRecord>();
+            logRecords.Add(new LogRecord { time = "22:51:12", temperature = "33.0 C", humidity = "60%", serving = "Large", mode = "Manual" });
+            logRecords.Add(new LogRecord { time = "23:51:12", temperature = "22.0 C", humidity = "63%", serving = "Medium", mode = "Manual" });
+            logRecords.Add(new LogRecord { time = "00:51:12", temperature = "25.0 C", humidity = "56%", serving = "Large", mode = "Auto" });
+            logRecords.Add(new LogRecord { time = "09:51:12", temperature = "26.0 C", humidity = "58%", serving = "Large", mode = "Manual" });
+            logRecords.Add(new LogRecord { time = "07:51:12", temperature = "24.0 C", humidity = "61%", serving = "Small", mode = "Auto" });
+            recyclerView.SetLayoutManager(new Android.Support.V7.Widget.LinearLayoutManager(recyclerView.Context));
+            RecyclerViewAdapter adapter = new RecyclerViewAdapter(logRecords);
+            recyclerView.SetAdapter(adapter);
+            //SetUpRecyclerView();
+        }
+
+        private void SetUpRecyclerView()
+        {
         }
     }
 }
