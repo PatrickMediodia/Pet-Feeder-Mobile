@@ -4485,7 +4485,6 @@ namespace Pet_Feeder_Machine_Problem
 			public const int design_text_input_password_icon = 2131427374;
 			
 			// aapt resource value: 0x7F0B002F
-			public const int dispense = 2131427375;
 			public const int Dispense = 2131427375;
 			
 			// aapt resource value: 0x7F0B0030
