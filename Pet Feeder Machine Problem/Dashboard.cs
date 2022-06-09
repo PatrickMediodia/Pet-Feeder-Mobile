@@ -22,7 +22,7 @@ namespace Pet_Feeder_Machine_Problem
     public class Dashboard : Activity
     {
         TextView temperatureTxt, humidityTxt, foodTxt, waterTxt, timestampTxt;
-        Button dispeseBtn, dispenseLogBtn;
+        Button dispeseBtn, dispenseLogBtn, accountManagementBtn;
         HttpClient client;
         public Timer RefreshDataTimer;
         
@@ -41,6 +41,7 @@ namespace Pet_Feeder_Machine_Problem
             
             dispeseBtn = FindViewById<Button>(Resource.Id.dispenseBtn);
             dispenseLogBtn = FindViewById<Button>(Resource.Id.btnDispenseLog);
+            accountManagementBtn = FindViewById<Button>(Resource.Id.accountManagementBtn);
 
             /*RunOnUiThread(async () =>
             {
@@ -59,6 +60,7 @@ namespace Pet_Feeder_Machine_Problem
 
             dispenseLogBtn.Click += DispenseLog;
             dispeseBtn.Click += ManualDispense;
+            accountManagementBtn.Click += AccountManagement;
         }
 
         private async void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -100,10 +102,13 @@ namespace Pet_Feeder_Machine_Problem
         public void DispenseLog(object source, EventArgs e)
         {
             Intent i = new Intent(this, typeof(DispenseLogActivity));
-            string username = Intent.GetStringExtra("username");
-            i.PutExtra("username", username);
             StartActivity(i);
         }
 
+        public void AccountManagement(object source, EventArgs e)
+        {
+            Intent i = new Intent(this, typeof(AccountManagement));
+            StartActivity(i);
+        }
     }
 }

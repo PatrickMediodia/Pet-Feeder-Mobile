@@ -8,8 +8,11 @@
     <string name="food_placeholder">Level</string>
     <string name="water_placeholder">Level</string>
     <string name="time_placeholder">Time</string>
-	<string name="dispLog_placeholder">Dispense Log</string>
+	  <string name="dispLog_placeholder">Dispense Log</string>
 
     <!-- Button strings-->
     <string name="dispense_button">Dispense</string>
+    <string name="account_management_button">Account Management</string>
+    <string name="change_account_details_button">Change Account Details</string>
+    <string name="change_password_button">Change Password</string>
 </resources>

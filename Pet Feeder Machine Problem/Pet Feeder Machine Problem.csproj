@@ -62,6 +62,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountManagement.cs" />
+    <Compile Include="ChangeAccountDetails.cs" />
+    <Compile Include="ChangePassword.cs" />
     <Compile Include="Dispense.cs" />
     <Compile Include="DispenseLog.cs" />
     <Compile Include="Adapters\RecyclerViewAdapter.cs" />
@@ -81,6 +84,10 @@
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_main.xml">
       <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Dispense.xml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
@@ -175,10 +182,22 @@
     <AndroidResource Include="Resources\drawable\manualDispenserTitle.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Dispense.xml" />
+    <AndroidResource Include="Resources\layout\dispenseLogActivity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\dispenseLogActivity.xml">
+    <AndroidResource Include="Resources\layout\account_management.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\change_account_details.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\change_password.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

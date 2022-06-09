@@ -11,6 +11,12 @@ using System.Text;
 
 namespace Pet_Feeder_Machine_Problem.Models
 {
+    public class Account 
+    { 
+        public string username { get; set; }
+        public string name { get; set; }
+    }
+
     public class EnvironmentAndSupply
     {
         public string temperature { get; set; }
