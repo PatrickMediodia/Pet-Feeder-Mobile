@@ -3,56 +3,124 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:background="#E6F4F4F4"
+        android:padding="9dp"
+        android:orientation="vertical">
+
         <TextView
             android:text="Time"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_marginRight="10px"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:id="@+id/tvTime" />
 
-        <TextView
-            android:text="Temperature"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_marginRight="10px"
-            android:id="@+id/tvTemp" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
 
-        <TextView
-            android:text="Humidity"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_marginRight="10px"
-            android:id="@+id/tvHum" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
-        <TextView
-            android:text="Serving"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_marginRight="10px"
-            android:id="@+id/tvServ" />
+                <ImageView
+                    android:src="@drawable/tempicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="25dp"
+                    android:maxWidth="25dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageTemp" />
 
-        <TextView
-            android:text="Mode"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_marginRight="10px"
-            android:id="@+id/tvMode" />
+                <TextView
+                    android:text="00.0"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/tvTemp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:src="@drawable/humicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="25dp"
+                    android:maxWidth="25dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageHum" />
+
+                <TextView
+                    android:text="00.0"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/tvHum" />
+            </TableRow>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:src="@drawable/servingicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="25dp"
+                    android:maxWidth="25dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageServing" />
+
+                <TextView
+                    android:text="0"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/tvServ" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:src="@drawable/modeicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="25dp"
+                    android:maxWidth="25dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/imageHum" />
+
+                <TextView
+                    android:text="Auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/tvMode" />
+            </TableRow>
+        </TableRow>
     </LinearLayout>
-
 </LinearLayout>
