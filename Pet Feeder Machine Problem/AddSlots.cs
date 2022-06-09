@@ -50,25 +50,33 @@ namespace Pet_Feeder_Machine_Problem
             string time = $"{timepicker.Hour}:{timepicker.Minute}:00";
             string serving = servingTxt.Text;
 
-            string url = RESTAPI.url() + $"addDispenseSlot.php?dispenseTime={time}&serving={serving}";
-
-            HttpResponseMessage response = await client.GetAsync(url);
-
-            if (response.StatusCode == HttpStatusCode.OK)
+            if (serving != "")
             {
-                var result = await response.Content.ReadAsStringAsync();
-                if (result.Contains("Dispense Slot Added"))
+                string url = RESTAPI.url() + $"addDispenseSlot.php?dispenseTime={time}&serving={serving}";
+
+                HttpResponseMessage response = await client.GetAsync(url);
+
+                if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    Intent i = new Intent(this, typeof(Dashboard));
-                    StartActivity(i);
+                    var result = await response.Content.ReadAsStringAsync();
+                    if (result.Contains("Dispense Slot Added"))
+                    {
+                        Intent i = new Intent(this, typeof(Dashboard));
+                        StartActivity(i);
+                        Toast.MakeText(this, result, ToastLength.Short).Show();
+                    }
                     Toast.MakeText(this, result, ToastLength.Short).Show();
                 }
-                Toast.MakeText(this, result, ToastLength.Short).Show();
+                else
+                {
+                    Toast.MakeText(this, "Error", ToastLength.Short).Show();
+                }
             }
-            else
+            else 
             {
-                Toast.MakeText(this, "Error", ToastLength.Short).Show();
+                Toast.MakeText(this, "Serving must not be empty", ToastLength.Short).Show();
             }
+
         }
     }
 }

@@ -58,11 +58,11 @@ namespace Pet_Feeder_Machine_Problem
                     Intent i = new Intent(this, typeof(Dashboard));
                     i.PutExtra("account", result);
                     StartActivity(i);
-                    Toast.MakeText(this, "Logged In", ToastLength.Long).Show();
+                    Toast.MakeText(this, "Logged In", ToastLength.Short).Show();
                 }
                 else 
                 {
-                    Toast.MakeText(this, result, ToastLength.Long).Show();
+                    Toast.MakeText(this, result, ToastLength.Short).Show();
                 }
                 
             }
