@@ -62,6 +62,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSlots.cs" />
     <Compile Include="AccountManagement.cs" />
     <Compile Include="ChangeAccountDetails.cs" />
     <Compile Include="ChangePassword.cs" />
@@ -200,6 +201,12 @@
     <AndroidResource Include="Resources\layout\change_password.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\addslots.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\addTitle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions />

@@ -233,7 +233,7 @@
 
             <Button
                 android:text="@string/dispLog_placeholder"
-                android:layout_width="180dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/buttonstyle"
@@ -242,17 +242,30 @@
                 android:id="@+id/btnDispenseLog"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="15dp"
                 android:textColor="@android:color/white" />
             
             <Button
                 android:text="@string/dispense_button"
-                android:layout_width="180dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttonstyle"
                 android:fontFamily="sans-serif-condensed"
                 android:textSize="18dp"
                 android:id="@+id/dispenseBtn"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@android:color/white"/> 
+
+            <Button
+                android:text="ADD DISPENSE SLOT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="18dp"
+                android:id="@+id/btnAddSlot"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="30dp"
