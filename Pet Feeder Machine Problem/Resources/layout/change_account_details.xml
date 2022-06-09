@@ -1,85 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="@drawable/turquoisebg">
 
-    <TextView
-        android:text="Change Account Details"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#FFF"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:id="@+id/textView1" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <TextView
-        android:text="Username:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:textSize="15dp"
-        android:textColor="#FFF"
-        android:id="@+id/textView2" />
+        <ImageView
+            android:src="@drawable/changedetailstitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:adjustViewBounds="true"
+            android:maxWidth="200dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/imageView2" />
 
-    <EditText
-        android:id="@id/usernameTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:padding="11dp"
-        android:maxLines="1"
-        android:maxLength="64"
-        android:textSize="15sp"
-        android:inputType="text"
-        android:hint="Enter New Username"
-        android:background="@drawable/edittextstyle"/>
+        <TextView
+            android:text="Username:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="15dp"
+            android:textColor="#FFF"
+            android:id="@+id/textView2" />
 
-    <TextView
-        android:text="Name:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:textSize="15dp"
-        android:textColor="#FFF"
-        android:id="@+id/textView3" />
+        <EditText
+            android:id="@id/usernameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:padding="11dp"
+            android:maxLines="1"
+            android:maxLength="64"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:hint="Enter New Username"
+            android:background="@drawable/edittextstyle"/>
 
-    <EditText
-        android:id="@+id/nameTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:padding="11dp"
-        android:maxLines="1"
-        android:maxLength="64"
-        android:textSize="15sp"
-        android:inputType="text"
-        android:hint="Enter New Name"
-        android:background="@drawable/edittextstyle"/>
+        <TextView
+            android:text="Name:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:textSize="15dp"
+            android:textColor="#FFF"
+            android:id="@+id/textView3" />
 
-    <Button
-        android:text="@string/change_account_details_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/buttonstyle"
-        android:fontFamily="sans-serif-condensed"
-        android:textSize="18dp"
-        android:id="@id/changeAccountDetailsBtn"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:textColor="@android:color/white"/>
+        <EditText
+            android:id="@+id/nameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:padding="11dp"
+            android:maxLines="1"
+            android:maxLength="64"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:hint="Enter New Name"
+            android:background="@drawable/edittextstyle"/>
 
-</LinearLayout>
+        <Button
+            android:text="@string/change_account_details_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonstyle"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18dp"
+            android:id="@id/changeAccountDetailsBtn"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
