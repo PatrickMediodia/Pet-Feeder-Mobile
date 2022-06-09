@@ -3359,133 +3359,142 @@ namespace Pet_Feeder_Machine_Problem
 			public const int buttonstyle = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int dashboardBg = 2131165288;
+			public const int currentSlotsTitle = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int dashboardTitle = 2131165289;
+			public const int dashboardBg = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int design_bottom_navigation_item_background = 2131165290;
+			public const int dashboardTitle = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int design_fab_background = 2131165291;
+			public const int deleteIcon = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int design_ic_visibility = 2131165292;
+			public const int deleteSmol = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int design_ic_visibility_off = 2131165293;
+			public const int design_bottom_navigation_item_background = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int design_password_eye = 2131165294;
+			public const int design_fab_background = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int design_snackbar_background = 2131165295;
+			public const int design_ic_visibility = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int editTextStyle = 2131165296;
+			public const int design_ic_visibility_off = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int foodwater = 2131165297;
+			public const int design_password_eye = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int humIcon = 2131165298;
+			public const int design_snackbar_background = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int ic_mtrl_chip_checked_black = 2131165299;
+			public const int editTextStyle = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int ic_mtrl_chip_checked_circle = 2131165300;
+			public const int foodwater = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int ic_mtrl_chip_close_circle = 2131165301;
+			public const int humIcon = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int logsTitle = 2131165302;
+			public const int ic_mtrl_chip_checked_black = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int manualDispenserTitle = 2131165303;
+			public const int ic_mtrl_chip_checked_circle = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int modeIcon = 2131165304;
+			public const int ic_mtrl_chip_close_circle = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int mtrl_snackbar_background = 2131165305;
+			public const int logsTitle = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int mtrl_tabs_default_indicator = 2131165306;
+			public const int manualDispenserTitle = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int navigation_empty_icon = 2131165307;
+			public const int modeIcon = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int notification_action_background = 2131165308;
+			public const int mtrl_snackbar_background = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int notification_bg = 2131165309;
+			public const int mtrl_tabs_default_indicator = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int notification_bg_low = 2131165310;
+			public const int navigation_empty_icon = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int notification_bg_low_normal = 2131165311;
+			public const int notification_action_background = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int notification_bg_low_pressed = 2131165312;
+			public const int notification_bg = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int notification_bg_normal = 2131165313;
+			public const int notification_bg_low = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int notification_bg_normal_pressed = 2131165314;
+			public const int notification_bg_low_normal = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int notification_icon_background = 2131165315;
+			public const int notification_bg_low_pressed = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int notification_template_icon_bg = 2131165316;
+			public const int notification_bg_normal = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int notification_template_icon_low_bg = 2131165317;
+			public const int notification_bg_normal_pressed = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int notification_tile_bg = 2131165318;
+			public const int notification_icon_background = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int notify_panel_notification_icon_bg = 2131165319;
+			public const int notification_template_icon_bg = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int petFeederIcon = 2131165320;
+			public const int notification_template_icon_low_bg = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int petFeederIconNL = 2131165321;
+			public const int notification_tile_bg = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int petFeederRound = 2131165322;
+			public const int notify_panel_notification_icon_bg = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int petFeederTitle = 2131165323;
+			public const int petFeederIcon = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int servingIcon = 2131165324;
+			public const int petFeederIconNL = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int temphum = 2131165325;
+			public const int petFeederRound = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int tempIcon = 2131165326;
+			public const int petFeederTitle = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int titleWhite = 2131165327;
+			public const int servingIcon = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int tooltip_frame_dark = 2131165328;
+			public const int temphum = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int tooltip_frame_light = 2131165329;
+			public const int tempIcon = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int turquoiseBg = 2131165330;
+			public const int titleWhite = 2131165330;
+			
+			// aapt resource value: 0x7F070093
+			public const int tooltip_frame_dark = 2131165331;
+			
+			// aapt resource value: 0x7F070094
+			public const int tooltip_frame_light = 2131165332;
+			
+			// aapt resource value: 0x7F070095
+			public const int turquoiseBg = 2131165333;
 			
 			static Drawable()
 			{
@@ -3897,10 +3906,12 @@ namespace Pet_Feeder_Machine_Problem
 			public const int icon_group = 2131230854;
 			
 			// aapt resource value: 0x7F080087
-			public const int ifRoom = 2131230855;
+			public const int imageHum = 2131230855;
+			public const int image = 2131230855;
 			
 			// aapt resource value: 0x7F080088
-			public const int image = 2131230856;
+			public const int imageServing = 2131230856;
+			public const int imageView1 = 2131230856;
 			
 			// aapt resource value: 0x7F080089
 			public const int imageHum = 2131230857;
@@ -3954,16 +3965,31 @@ namespace Pet_Feeder_Machine_Problem
 			public const int locale = 2131230873;
 			
 			// aapt resource value: 0x7F08009A
-			public const int loginBtn = 2131230874;
+			public const int masked = 2131230874;
+			public const int media_controller_compat_view_tag = 2131230874;
 			
 			// aapt resource value: 0x7F08009B
-			public const int ltr = 2131230875;
+			public const int message = 2131230875;
+			
+			// aapt resource value: 0x7F08009B
+			public const int media_actions = 2131230875;
+			
+			// aapt resource value: 0x7F080003
+			public const int META = 2131230723;
+			
+			// aapt resource value: 0x7F08009B
+			public const int media_controller_compat_view_tag = 2131230876;
+			public const int middle = 2131230876;
 			
 			// aapt resource value: 0x7F08009C
 			public const int masked = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int media_actions = 2131230877;
+			public const int mtrl_child_content_container = 2131230877;
+			
+			// aapt resource value: 0x7F080003
+			public const int middle = 2131230878;
+			public const int mtrl_child_content_container = 2131230878;
 			
 			// aapt resource value: 0x7F08009E
 			public const int media_controller_compat_view_tag = 2131230878;
@@ -4110,25 +4136,44 @@ namespace Pet_Feeder_Machine_Problem
 			public const int search_edit_frame = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int search_go_btn = 2131230925;
+			public const int search_voice_btn = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int search_mag_icon = 2131230926;
+			public const int search_voice_btn = 2131230927;
+			public const int selected = 2131230927;
+			
+			// aapt resource value: 0x7F0800D1
+			public const int selected = 2131230929;
+			// aapt resource value: 0x7F0800CE
+			public const int select_dialog_listview = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
 			public const int search_plate = 2131230927;
 			
-			// aapt resource value: 0x7F0800D0
-			public const int search_src_text = 2131230928;
+			// aapt resource value: 0x7F080004
+			public const int SHIFT = 2131230724;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int search_voice_btn = 2131230929;
+			public const int shortcut = 2131230929;
 			
-			// aapt resource value: 0x7F0800D3
-			public const int selected = 2131230931;
+			// aapt resource value: 0x7F0800D0
+			public const int servingsTxt = 2131230930;
+			
+			// aapt resource value: 0x7F080004
+			public const int SHIFT = 2131230724;
+			public const int showCustom = 2131230930;
+			
+			// aapt resource value: 0x7F0800D1
+			public const int shortcut = 2131230931;
+			public const int showHome = 2131230931;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int select_dialog_listview = 2131230930;
+			public const int showCustom = 2131230932;
+			public const int showTitle = 2131230932;
+			
+			// aapt resource value: 0x7F0800D3
+			public const int showHome = 2131230933;
+			public const int smallLabel = 2131230933;
 			
 			// aapt resource value: 0x7F0800D4
 			public const int servingsTxt = 2131230932;
@@ -4263,10 +4308,24 @@ namespace Pet_Feeder_Machine_Problem
 			public const int text2 = 2131230973;
 			
 			// aapt resource value: 0x7F080109
-			public const int textinput_counter = 2131230985;
+			public const int textinput_helper_text = 2131230985;
+			public const int textSpacerNoTitle = 2131230971;
 			
-			// aapt resource value: 0x7F08010A
-			public const int textinput_error = 2131230986;
+			// aapt resource value: 0x7F0800F9
+			public const int textSpacerNoButtons = 2131230972;
+			public const int textStart = 2131230972;
+			
+			// aapt resource value: 0x7F0800FA
+			public const int textSpacerNoTitle = 2131230973;
+			public const int textView1 = 2131230973;
+			
+			// aapt resource value: 0x7F0800FB
+			public const int textStart = 2131230974;
+			public const int textView2 = 2131230974;
+			
+			// aapt resource value: 0x7F0800FC
+			public const int textView1 = 2131230975;
+			public const int textView3 = 2131230975;
 			
 			// aapt resource value: 0x7F08010B
 			public const int textinput_helper_text = 2131230987;
