@@ -33,7 +33,7 @@ namespace Pet_Feeder_Machine_Problem.Adapters
             // Replace the contents of the view with that element
             var holder = viewHolder as DispenseSlotsAdapterViewHolder;
             //holder.TextView.Text = items[position];
-            holder.time_TV.Text = items[position].time;
+            holder.time_TV.Text = items[position].dispenseTime;
             holder.serving_TV.Text = items[position].serving;
 
         }

@@ -37,7 +37,7 @@ namespace Pet_Feeder_Machine_Problem.Models
 
     public class DispenseSlot
     {
-        public string time { get; set; }
+        public string dispenseTime { get; set; }
         public string serving { get; set; }
     }
 }
