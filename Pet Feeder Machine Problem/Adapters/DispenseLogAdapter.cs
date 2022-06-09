@@ -7,13 +7,13 @@ using System.Collections.Generic;
 
 namespace Pet_Feeder_Machine_Problem
 {
-    internal class RecyclerViewAdapter : RecyclerView.Adapter
+    internal class DispenseLogAdapter : RecyclerView.Adapter
     {
         public event EventHandler<RecyclerViewAdapterClickEventArgs> ItemClick;
         public event EventHandler<RecyclerViewAdapterClickEventArgs> ItemLongClick;
         List<LogRecord> items;
 
-        public RecyclerViewAdapter(List<LogRecord> data)
+        public DispenseLogAdapter(List<LogRecord> data)
         {
             items = data;
         }

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Pet_Feeder_Machine_Problem
 {
     [Activity(Label = "DispenseLogActivity", Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
-    public class DispenseLogActivity : Activity
+    public class DispenseLog : Activity
     {
         RecyclerView recyclerView;
         HttpClient client;
@@ -45,7 +45,7 @@ namespace Pet_Feeder_Machine_Problem
                 var responseObject = JsonConvert.DeserializeObject<List<LogRecord>>(result);
 
                 recyclerView.SetLayoutManager(new Android.Support.V7.Widget.LinearLayoutManager(recyclerView.Context));
-                RecyclerViewAdapter adapter = new RecyclerViewAdapter(responseObject);
+                DispenseLogAdapter adapter = new DispenseLogAdapter(responseObject);
                 recyclerView.SetAdapter(adapter);
             }
             else

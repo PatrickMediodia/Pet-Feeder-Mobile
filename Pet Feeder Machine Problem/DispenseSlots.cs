@@ -3,6 +3,7 @@ using Android.OS;
 using Android.Support.V7.Widget;
 using Android.Widget;
 using Newtonsoft.Json;
+using Pet_Feeder_Machine_Problem.Adapters;
 using Pet_Feeder_Machine_Problem.Models;
 using System.Collections.Generic;
 using System.Net;
@@ -35,18 +36,18 @@ namespace Pet_Feeder_Machine_Problem
         {
             client = new HttpClient();
 
-            string url = RESTAPI.url() + $".php";
+            string url = RESTAPI.url() + $"getDispenseSlots.php";
 
             HttpResponseMessage response = await client.GetAsync(url);
 
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                /*var result = await response.Content.ReadAsStringAsync();
-                var responseObject = JsonConvert.DeserializeObject<List<LogRecord>>(result);
+                var result = await response.Content.ReadAsStringAsync();
+                var responseObject = JsonConvert.DeserializeObject<List<DispenseSlot>>(result);
 
                 recyclerView.SetLayoutManager(new Android.Support.V7.Widget.LinearLayoutManager(recyclerView.Context));
-                RecyclerViewAdapter adapter = new RecyclerViewAdapter(responseObject);
-                recyclerView.SetAdapter(adapter);*/
+                DispenseSlotsAdapter adapter = new DispenseSlotsAdapter(responseObject);
+                recyclerView.SetAdapter(adapter);
             }
             else
             {

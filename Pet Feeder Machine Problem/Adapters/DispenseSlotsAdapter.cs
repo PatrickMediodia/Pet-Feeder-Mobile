@@ -13,7 +13,7 @@ namespace Pet_Feeder_Machine_Problem.Adapters
         public event EventHandler<DispenseSlotsAdapterClickEventArgs> ItemLongClick;
         List<DispenseSlot> items;
 
-        public DispenseSlotsAdapter(string[] data)
+        public DispenseSlotsAdapter(List<DispenseSlot> data)
         {
             items = data;
         }
@@ -21,13 +21,6 @@ namespace Pet_Feeder_Machine_Problem.Adapters
         // Create new views (invoked by the layout manager)
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-
-            //Setup your layout here
-            View itemView = null;
-            //var id = Resource.Layout.__YOUR_ITEM_HERE;
-            //itemView = LayoutInflater.From(parent.Context).
-            //       Inflate(id, parent, false);
-
             View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.dispenseSlots, parent, false);
 
             var vh = new DispenseSlotsAdapterViewHolder(itemView, OnClick, OnLongClick);

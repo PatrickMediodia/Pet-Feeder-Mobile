@@ -259,6 +259,19 @@
                 android:textColor="@android:color/white"/> 
 
             <Button
+                android:text="@string/view_dispense_slots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonstyle"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="18dp"
+                android:id="@+id/btnViewSlots"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@android:color/white"/> 
+
+            <Button
                 android:text="@string/dispLog_placeholder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
