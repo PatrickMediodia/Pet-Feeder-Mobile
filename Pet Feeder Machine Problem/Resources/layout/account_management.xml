@@ -30,6 +30,18 @@
         android:textAlignment="center"
         android:id="@id/usernameTxt" />
 
+    <TextView
+        android:text="Name: "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:id="@id/nameTxt" />
+
     <Button
         android:text="@string/change_account_details_button"
         android:layout_width="match_parent"
