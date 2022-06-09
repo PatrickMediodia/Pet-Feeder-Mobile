@@ -4329,7 +4329,7 @@ namespace Pet_Feeder_Machine_Problem
 			public const int tvServ = 2131231000;
 			
 			// aapt resource value: 0x7F080119
-			public const int tvServing = 2131231001;
+			public const int tvServing_DispenseSlot = 2131231001;
 			
 			// aapt resource value: 0x7F08011A
 			public const int tvTemp = 2131231002;
@@ -4338,49 +4338,52 @@ namespace Pet_Feeder_Machine_Problem
 			public const int tvTime = 2131231003;
 			
 			// aapt resource value: 0x7F08011C
-			public const int @unchecked = 2131231004;
+			public const int tvTime_DispenseSlot = 2131231004;
 			
 			// aapt resource value: 0x7F08011D
-			public const int uniform = 2131231005;
+			public const int @unchecked = 2131231005;
 			
 			// aapt resource value: 0x7F08011E
-			public const int unlabeled = 2131231006;
+			public const int uniform = 2131231006;
 			
 			// aapt resource value: 0x7F08011F
-			public const int up = 2131231007;
+			public const int unlabeled = 2131231007;
 			
 			// aapt resource value: 0x7F080120
-			public const int useLogo = 2131231008;
+			public const int up = 2131231008;
 			
 			// aapt resource value: 0x7F080121
-			public const int usernameTxt = 2131231009;
+			public const int useLogo = 2131231009;
 			
 			// aapt resource value: 0x7F080122
-			public const int view_offset_helper = 2131231010;
+			public const int usernameTxt = 2131231010;
 			
 			// aapt resource value: 0x7F080123
-			public const int view_tree_lifecycle_owner = 2131231011;
+			public const int view_offset_helper = 2131231011;
 			
 			// aapt resource value: 0x7F080124
-			public const int view_tree_saved_state_registry_owner = 2131231012;
+			public const int view_tree_lifecycle_owner = 2131231012;
 			
 			// aapt resource value: 0x7F080125
-			public const int view_tree_view_model_store_owner = 2131231013;
+			public const int view_tree_saved_state_registry_owner = 2131231013;
 			
 			// aapt resource value: 0x7F080126
-			public const int visible = 2131231014;
+			public const int view_tree_view_model_store_owner = 2131231014;
 			
 			// aapt resource value: 0x7F080127
-			public const int visible_removing_fragment_view_tag = 2131231015;
+			public const int visible = 2131231015;
 			
 			// aapt resource value: 0x7F080128
-			public const int waterTxt = 2131231016;
+			public const int visible_removing_fragment_view_tag = 2131231016;
 			
 			// aapt resource value: 0x7F080129
-			public const int withText = 2131231017;
+			public const int waterTxt = 2131231017;
 			
 			// aapt resource value: 0x7F08012A
-			public const int wrap_content = 2131231018;
+			public const int withText = 2131231018;
+			
+			// aapt resource value: 0x7F08012B
+			public const int wrap_content = 2131231019;
 			
 			static Id()
 			{
