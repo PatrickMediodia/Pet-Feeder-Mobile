@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace Pet_Feeder_Machine_Problem
 {
-    [Activity(Label = "DispenseLogActivity", Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
-    public class DispenseLogActivity : Activity
+    [Activity(Label = "DispenseSlots", Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
+    public class DispenseSlots : Activity
     {
         RecyclerView recyclerView;
         HttpClient client;
@@ -21,36 +21,36 @@ namespace Pet_Feeder_Machine_Problem
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            SetContentView(Resource.Layout.dispenseLogActivity);
-            
+            SetContentView(Resource.Layout.dispenseSlotsActivity);
+
             recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView1);
 
             RunOnUiThread(async () =>
             {
-                await UpdateLog();
+                await UpdateSlots();
             });
         }
 
-        public async Task UpdateLog()
+        public async Task UpdateSlots()
         {
             client = new HttpClient();
 
-            string url = RESTAPI.url() + $"getDispenseLogs.php";
+            string url = RESTAPI.url() + $".php";
 
             HttpResponseMessage response = await client.GetAsync(url);
 
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                var result = await response.Content.ReadAsStringAsync();
+                /*var result = await response.Content.ReadAsStringAsync();
                 var responseObject = JsonConvert.DeserializeObject<List<LogRecord>>(result);
 
                 recyclerView.SetLayoutManager(new Android.Support.V7.Widget.LinearLayoutManager(recyclerView.Context));
                 RecyclerViewAdapter adapter = new RecyclerViewAdapter(responseObject);
-                recyclerView.SetAdapter(adapter);
+                recyclerView.SetAdapter(adapter);*/
             }
             else
             {
-                Toast.MakeText(this, "Error in fetching log records", ToastLength.Long).Show();
+                Toast.MakeText(this, "Error in fetching slots", ToastLength.Long).Show();
             }
         }
     }

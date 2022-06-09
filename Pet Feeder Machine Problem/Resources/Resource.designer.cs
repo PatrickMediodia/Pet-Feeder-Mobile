@@ -4212,49 +4212,52 @@ namespace Pet_Feeder_Machine_Problem
 			public const int tvServ = 2131230982;
 			
 			// aapt resource value: 0x7F080107
-			public const int tvTemp = 2131230983;
+			public const int tvServing = 2131230983;
 			
 			// aapt resource value: 0x7F080108
-			public const int tvTime = 2131230984;
+			public const int tvTemp = 2131230984;
 			
 			// aapt resource value: 0x7F080109
-			public const int @unchecked = 2131230985;
+			public const int tvTime = 2131230985;
 			
 			// aapt resource value: 0x7F08010A
-			public const int uniform = 2131230986;
+			public const int @unchecked = 2131230986;
 			
 			// aapt resource value: 0x7F08010B
-			public const int unlabeled = 2131230987;
+			public const int uniform = 2131230987;
 			
 			// aapt resource value: 0x7F08010C
-			public const int up = 2131230988;
+			public const int unlabeled = 2131230988;
 			
 			// aapt resource value: 0x7F08010D
-			public const int useLogo = 2131230989;
+			public const int up = 2131230989;
 			
 			// aapt resource value: 0x7F08010E
-			public const int usernameTxt = 2131230990;
+			public const int useLogo = 2131230990;
 			
 			// aapt resource value: 0x7F08010F
-			public const int view_offset_helper = 2131230991;
+			public const int usernameTxt = 2131230991;
 			
 			// aapt resource value: 0x7F080110
-			public const int view_tree_saved_state_registry_owner = 2131230992;
+			public const int view_offset_helper = 2131230992;
 			
 			// aapt resource value: 0x7F080111
-			public const int visible = 2131230993;
+			public const int view_tree_saved_state_registry_owner = 2131230993;
 			
 			// aapt resource value: 0x7F080112
-			public const int visible_removing_fragment_view_tag = 2131230994;
+			public const int visible = 2131230994;
 			
 			// aapt resource value: 0x7F080113
-			public const int waterTxt = 2131230995;
+			public const int visible_removing_fragment_view_tag = 2131230995;
 			
 			// aapt resource value: 0x7F080114
-			public const int withText = 2131230996;
+			public const int waterTxt = 2131230996;
 			
 			// aapt resource value: 0x7F080115
-			public const int wrap_content = 2131230997;
+			public const int withText = 2131230997;
+			
+			// aapt resource value: 0x7F080116
+			public const int wrap_content = 2131230998;
 			
 			static Id()
 			{
@@ -4536,40 +4539,43 @@ namespace Pet_Feeder_Machine_Problem
 			public const int dispenseLogActivity = 2131427381;
 			
 			// aapt resource value: 0x7F0B0036
-			public const int mtrl_layout_snackbar = 2131427382;
+			public const int dispenseSlots = 2131427382;
 			
 			// aapt resource value: 0x7F0B0037
-			public const int mtrl_layout_snackbar_include = 2131427383;
+			public const int mtrl_layout_snackbar = 2131427383;
 			
 			// aapt resource value: 0x7F0B0038
-			public const int notification_action = 2131427384;
+			public const int mtrl_layout_snackbar_include = 2131427384;
 			
 			// aapt resource value: 0x7F0B0039
-			public const int notification_action_tombstone = 2131427385;
+			public const int notification_action = 2131427385;
 			
 			// aapt resource value: 0x7F0B003A
-			public const int notification_template_custom_big = 2131427386;
+			public const int notification_action_tombstone = 2131427386;
 			
 			// aapt resource value: 0x7F0B003B
-			public const int notification_template_icon_group = 2131427387;
+			public const int notification_template_custom_big = 2131427387;
 			
 			// aapt resource value: 0x7F0B003C
-			public const int notification_template_part_chronometer = 2131427388;
+			public const int notification_template_icon_group = 2131427388;
 			
 			// aapt resource value: 0x7F0B003D
-			public const int notification_template_part_time = 2131427389;
+			public const int notification_template_part_chronometer = 2131427389;
 			
 			// aapt resource value: 0x7F0B003E
-			public const int select_dialog_item_material = 2131427390;
+			public const int notification_template_part_time = 2131427390;
 			
 			// aapt resource value: 0x7F0B003F
-			public const int select_dialog_multichoice_material = 2131427391;
+			public const int select_dialog_item_material = 2131427391;
 			
 			// aapt resource value: 0x7F0B0040
-			public const int select_dialog_singlechoice_material = 2131427392;
+			public const int select_dialog_multichoice_material = 2131427392;
 			
 			// aapt resource value: 0x7F0B0041
-			public const int support_simple_spinner_dropdown_item = 2131427393;
+			public const int select_dialog_singlechoice_material = 2131427393;
+			
+			// aapt resource value: 0x7F0B0042
+			public const int support_simple_spinner_dropdown_item = 2131427394;
 			
 			static Layout()
 			{
