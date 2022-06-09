@@ -20,7 +20,7 @@ namespace Pet_Feeder_Machine_Problem
     [Activity(Label = "AccountManagement", Theme = "@style/Theme.AppCompat.Light.NoActionBar")]
     public class AccountManagement : Activity
     {
-        TextView usernameTxt;
+        TextView usernameTxt, nameTxt;
         Button changeAccountDetailsBtn, changePasswordBtn;
         HttpClient client;
         Account accountObject;
@@ -34,6 +34,8 @@ namespace Pet_Feeder_Machine_Problem
             SetContentView(Resource.Layout.account_management);
 
             usernameTxt = FindViewById<TextView>(Resource.Id.usernameTxt);
+            nameTxt = FindViewById<TextView>(Resource.Id.nameTxt);
+
             changeAccountDetailsBtn = FindViewById<Button>(Resource.Id.changeAccountDetailsBtn);
             changePasswordBtn = FindViewById<Button>(Resource.Id.changePasswordBtn);
             
@@ -69,9 +71,11 @@ namespace Pet_Feeder_Machine_Problem
             if (!response.Contains("No Account"))
             {
                 accountObject = JsonConvert.DeserializeObject<Account>(response);
+
                 usernameTxt.Text = $"Username: {accountObject.username}";
+                nameTxt.Text = $"Name: {accountObject.name}";
             }
-            else 
+            else
             {
                 Toast.MakeText(this, response, ToastLength.Long).Show();
             }
