@@ -1,10 +1,12 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Support.V7.Widget;
 using Android.Widget;
 using Newtonsoft.Json;
 using Pet_Feeder_Machine_Problem.Adapters;
 using Pet_Feeder_Machine_Problem.Models;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
@@ -18,6 +20,7 @@ namespace Pet_Feeder_Machine_Problem
         RecyclerView recyclerView;
         HttpClient client;
         DispenseSlotsAdapter adapter;
+        Button addSlotBtn;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -26,6 +29,7 @@ namespace Pet_Feeder_Machine_Problem
             SetContentView(Resource.Layout.dispenseSlotsActivity);
 
             recyclerView = FindViewById<RecyclerView>(Resource.Id.dispenseSlotsRecView);
+            addSlotBtn = FindViewById<Button>(Resource.Id.btnAddSlot);
 
             RunOnUiThread(async () =>
             {
@@ -33,6 +37,13 @@ namespace Pet_Feeder_Machine_Problem
             });
 
             ChangedData();
+            addSlotBtn.Click += AddSlot;
+        }
+
+        public void AddSlot(object source, EventArgs e)
+        {
+            Intent i = new Intent(this, typeof(AddSlots));
+            StartActivity(i);
         }
 
         public async Task UpdateSlots()

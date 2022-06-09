@@ -61,11 +61,9 @@ namespace Pet_Feeder_Machine_Problem
                     var result = await response.Content.ReadAsStringAsync();
                     if (result.Contains("Dispense Slot Added"))
                     {
-                        Intent i = new Intent(this, typeof(Dashboard));
-                        StartActivity(i);
                         Toast.MakeText(this, result, ToastLength.Short).Show();
+                        Finish();
                     }
-                    Toast.MakeText(this, result, ToastLength.Short).Show();
                 }
                 else
                 {
