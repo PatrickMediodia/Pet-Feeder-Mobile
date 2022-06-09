@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/turquoisebg">
+
+    <TextView
+        android:text="Account Management"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:id="@+id/textView1" />
+
+    <TextView
+        android:text="Username: "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:id="@id/usernameTxt" />
+
+    <Button
+        android:text="@string/change_account_details_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonstyle"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="18dp"
+        android:id="@+id/changeAccountDetailsBtn"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:text="@string/change_password_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonstyle"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="18dp"
+        android:id="@+id/changePasswordBtn"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

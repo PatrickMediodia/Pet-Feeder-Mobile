@@ -22,9 +22,9 @@ namespace Pet_Feeder_Machine_Problem
     public class Dashboard : Activity
     {
         TextView temperatureTxt, humidityTxt, foodTxt, waterTxt, timestampTxt;
-        Button dispeseBtn, dispenseLogBtn;
+        Button dispeseBtn, dispenseLogBtn, addSlotBtn, accountManagementBtn;
         HttpClient client;
-        public Timer RefreshDataTimer;
+        Timer RefreshDataTimer;
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -41,8 +41,10 @@ namespace Pet_Feeder_Machine_Problem
             
             dispeseBtn = FindViewById<Button>(Resource.Id.dispenseBtn);
             dispenseLogBtn = FindViewById<Button>(Resource.Id.btnDispenseLog);
+            addSlotBtn = FindViewById<Button>(Resource.Id.btnAddSlot);
+            accountManagementBtn = FindViewById<Button>(Resource.Id.accountManagementBtn);
 
-            /*RunOnUiThread(async () =>
+            RunOnUiThread(async () =>
             {
                 await UpdateStatus();
             });
@@ -52,18 +54,18 @@ namespace Pet_Feeder_Machine_Problem
             RefreshDataTimer.AutoReset = true;
             RefreshDataTimer.Enabled = true;
 
-            dispeseBtn.Click += async (sender, e) =>
-            {
-                await ManualDispense(sender, e);
-            };*/
-
             dispenseLogBtn.Click += DispenseLog;
             dispeseBtn.Click += ManualDispense;
+            addSlotBtn.Click += AddSlot;
+            accountManagementBtn.Click += AccountManagement;
         }
 
-        private async void OnTimedEvent(object source, ElapsedEventArgs e)
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            await UpdateStatus();
+            RunOnUiThread(async () =>
+            {
+                await UpdateStatus();
+            });
         }
 
         public async Task UpdateStatus() 
@@ -100,10 +102,18 @@ namespace Pet_Feeder_Machine_Problem
         public void DispenseLog(object source, EventArgs e)
         {
             Intent i = new Intent(this, typeof(DispenseLogActivity));
-            string username = Intent.GetStringExtra("username");
-            i.PutExtra("username", username);
             StartActivity(i);
         }
 
+        public void AddSlot(object source, EventArgs e)
+        {
+            Intent i = new Intent(this, typeof(AddSlots));
+            StartActivity(i);
+        }
+        public void AccountManagement(object source, EventArgs e)
+        {
+            Intent i = new Intent(this, typeof(AccountManagement));
+            StartActivity(i);
+        }
     }
 }

@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Support.V7.Widget;
 using Android.Widget;
 using AndroidX.AppCompat.App;
+using Newtonsoft.Json;
 using Pet_Feeder_Machine_Problem.Models;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,6 @@ namespace Pet_Feeder_Machine_Problem
             loginBtn.Click += async (sender, e) => {
                 await Login(sender, e);
             };
-
         }
 
         public async Task Login(object sender, EventArgs e)
@@ -53,13 +53,13 @@ namespace Pet_Feeder_Machine_Problem
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 var result = await response.Content.ReadAsStringAsync();
-                if (result.Contains("Logged in"))
+                if (!result.Contains("Incorrect Credentials"))
                 {
                     Intent i = new Intent(this, typeof(Dashboard));
-                    i.PutExtra("username", username);
+                    i.PutExtra("account", result);
                     StartActivity(i);
                 }
-                Toast.MakeText(this, result, ToastLength.Long).Show();
+                Toast.MakeText(this, "Logged In", ToastLength.Long).Show();
             }
             else
             {
