@@ -78,9 +78,7 @@ namespace Pet_Feeder_Machine_Problem
             {
                 var result = await response.Content.ReadAsStringAsync();
                 Toast.MakeText(this, result, ToastLength.Long).Show();
-
-                Intent i = new Intent(this, typeof(AccountManagement));
-                StartActivity(i);
+                Finish();
             }
             else
             {

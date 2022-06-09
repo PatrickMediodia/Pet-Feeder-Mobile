@@ -24,7 +24,7 @@ namespace Pet_Feeder_Machine_Problem
         TextView temperatureTxt, humidityTxt, foodTxt, waterTxt, timestampTxt;
         Button dispeseBtn, dispenseLogBtn, addSlotBtn, accountManagementBtn;
         HttpClient client;
-        public Timer RefreshDataTimer;
+        Timer RefreshDataTimer;
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -44,7 +44,7 @@ namespace Pet_Feeder_Machine_Problem
             addSlotBtn = FindViewById<Button>(Resource.Id.btnAddSlot);
             accountManagementBtn = FindViewById<Button>(Resource.Id.accountManagementBtn);
 
-            /*RunOnUiThread(async () =>
+            RunOnUiThread(async () =>
             {
                 await UpdateStatus();
             });
@@ -54,20 +54,18 @@ namespace Pet_Feeder_Machine_Problem
             RefreshDataTimer.AutoReset = true;
             RefreshDataTimer.Enabled = true;
 
-            dispeseBtn.Click += async (sender, e) =>
-            {
-                await ManualDispense(sender, e);
-            };*/
-
             dispenseLogBtn.Click += DispenseLog;
             dispeseBtn.Click += ManualDispense;
             addSlotBtn.Click += AddSlot;
             accountManagementBtn.Click += AccountManagement;
         }
 
-        private async void OnTimedEvent(object source, ElapsedEventArgs e)
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            await UpdateStatus();
+            RunOnUiThread(async () =>
+            {
+                await UpdateStatus();
+            });
         }
 
         public async Task UpdateStatus() 

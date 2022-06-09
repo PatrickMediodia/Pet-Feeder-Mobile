@@ -13,6 +13,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace Pet_Feeder_Machine_Problem
 {
@@ -23,6 +24,7 @@ namespace Pet_Feeder_Machine_Problem
         Button changeAccountDetailsBtn, changePasswordBtn;
         HttpClient client;
         Account accountObject;
+        Timer RefreshDataTimer;
 
         protected override async void OnCreate(Bundle savedInstanceState)
         {
@@ -38,7 +40,22 @@ namespace Pet_Feeder_Machine_Problem
             changeAccountDetailsBtn.Click += ChangeAccountDetails;
             changePasswordBtn.Click += ChangePassword;
 
-            await LoadUserAccount();
+            RunOnUiThread(async () =>
+            {
+                await LoadUserAccount();
+            });
+
+            RefreshDataTimer = new Timer(1000);
+            RefreshDataTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            RefreshDataTimer.AutoReset = true;
+            RefreshDataTimer.Enabled = true;
+        }
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
+            RunOnUiThread(async() =>
+            {
+                await LoadUserAccount();
+            });
         }
 
         public async Task LoadUserAccount()
@@ -64,7 +81,6 @@ namespace Pet_Feeder_Machine_Problem
         {
             Intent i = new Intent(this, typeof(ChangeAccountDetails));
             StartActivity(i);
-            Finish();
         }
 
         public void ChangePassword(object source, EventArgs e)

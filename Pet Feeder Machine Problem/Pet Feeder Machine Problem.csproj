@@ -67,7 +67,6 @@
     <Compile Include="ChangeAccountDetails.cs" />
     <Compile Include="ChangePassword.cs" />
     <Compile Include="Dispense.cs" />
-    <Compile Include="DispenseLog.cs" />
     <Compile Include="Adapters\RecyclerViewAdapter.cs" />
     <Compile Include="DispenseLogActivity.cs" />
     <Compile Include="RESTAPI.cs" />
@@ -85,10 +84,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_main.xml">
       <SubType>Designer</SubType>
-    </AndroidResource>
-    <AndroidResource Include="Resources\layout\Dispense.xml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
@@ -207,6 +202,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\addTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\dispense.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions />
