@@ -17,6 +17,7 @@ namespace Pet_Feeder_Machine_Problem
     {
         RecyclerView recyclerView;
         HttpClient client;
+        DispenseSlotsAdapter adapter;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -30,6 +31,8 @@ namespace Pet_Feeder_Machine_Problem
             {
                 await UpdateSlots();
             });
+
+            ChangedData();
         }
 
         public async Task UpdateSlots()
@@ -43,16 +46,49 @@ namespace Pet_Feeder_Machine_Problem
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 var result = await response.Content.ReadAsStringAsync();
-                var responseObject = JsonConvert.DeserializeObject<List<DispenseSlot>>(result);
-
-                recyclerView.SetLayoutManager(new Android.Support.V7.Widget.LinearLayoutManager(recyclerView.Context));
-                DispenseSlotsAdapter adapter = new DispenseSlotsAdapter(responseObject);
-                recyclerView.SetAdapter(adapter);
+                if (result.Contains("No slots found"))
+                {
+                    Toast.MakeText(this, "No Available Dispense Slots", ToastLength.Short).Show();
+                    Finish();
+                }
+                else 
+                {
+                    var responseObject = JsonConvert.DeserializeObject<List<DispenseSlot>>(result);
+                    recyclerView.SetLayoutManager(new LinearLayoutManager(recyclerView.Context));
+                    adapter = new DispenseSlotsAdapter(responseObject, this);
+                    recyclerView.SetAdapter(adapter);
+                }
             }
             else
             {
-                Toast.MakeText(this, "Error in fetching slots", ToastLength.Long).Show();
+                Toast.MakeText(this, "Error in fetching slots", ToastLength.Short).Show();
             }
+        }
+
+        public async void ChangedData()
+        {
+            await Task.Delay(500).ContinueWith(async t =>
+            {
+                client = new HttpClient();
+
+                string url = RESTAPI.url() + $"getDispenseSlots.php";
+
+                HttpResponseMessage response = await client.GetAsync(url);
+
+                var result = await response.Content.ReadAsStringAsync();
+
+                if (result.Contains("No slots found"))
+                {
+                    Toast.MakeText(this, "No Available Dispense Slots", ToastLength.Short).Show();
+                    Finish();
+                }
+                else 
+                {
+                    var newData = JsonConvert.DeserializeObject<List<DispenseSlot>>(result);
+                    adapter.RefreshItems(newData);
+                    ChangedData();
+                }
+            }, TaskScheduler.FromCurrentSynchronizationContext());
         }
     }
 }
