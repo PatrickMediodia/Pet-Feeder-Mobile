@@ -30,12 +30,10 @@ namespace Pet_Feeder_Machine_Problem.Adapters
         // Replace the contents of a view (invoked by the layout manager)
         public override void OnBindViewHolder(RecyclerView.ViewHolder viewHolder, int position)
         {
-            var item = items[position];
-
             // Replace the contents of the view with that element
             var holder = viewHolder as DispenseSlotsAdapterViewHolder;
             //holder.TextView.Text = items[position];
-            holder.time_TV.Text = items[position].time;
+            holder.time_TV.Text = items[position].dispenseTime;
             holder.serving_TV.Text = items[position].serving;
 
         }
@@ -55,8 +53,8 @@ namespace Pet_Feeder_Machine_Problem.Adapters
         public DispenseSlotsAdapterViewHolder(View itemView, Action<DispenseSlotsAdapterClickEventArgs> clickListener,
                             Action<DispenseSlotsAdapterClickEventArgs> longClickListener) : base(itemView)
         {
-            time_TV = (TextView)itemView.FindViewById(Resource.Id.tvTime);
-            serving_TV = (TextView)itemView.FindViewById(Resource.Id.tvServ);
+            time_TV = (TextView)itemView.FindViewById(Resource.Id.tvTime_DispenseSlot);
+            serving_TV = (TextView)itemView.FindViewById(Resource.Id.tvServing_DispenseSlot);
 
             itemView.Click += (sender, e) => clickListener(new DispenseSlotsAdapterClickEventArgs { View = itemView, Position = AdapterPosition });
             itemView.LongClick += (sender, e) => longClickListener(new DispenseSlotsAdapterClickEventArgs { View = itemView, Position = AdapterPosition });
