@@ -4,6 +4,7 @@ using Android.Widget;
 using Pet_Feeder_Machine_Problem.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Pet_Feeder_Machine_Problem
 {
@@ -35,7 +36,12 @@ namespace Pet_Feeder_Machine_Problem
             // Replace the contents of the view with that element
             var holder = viewHolder as RecyclerViewAdapterViewHolder;
             //holder.TextView.Text = items[position];
-            holder.time_TV.Text = items[position].time;
+
+            string input = items[position].time;
+            var timeFromInput = DateTime.ParseExact(input, "yyyy-MM-dd HH:mm:ss", null, DateTimeStyles.None);
+            string timeIn12HourFormatForDisplay = timeFromInput.ToString("MM/dd/yyy hh:mm tt", CultureInfo.InvariantCulture);
+            holder.time_TV.Text = timeIn12HourFormatForDisplay;
+
             holder.temperature_TV.Text = items[position].temperature;
             holder.humidity_TV.Text = items[position].humidity;
             holder.serving_TV.Text = items[position].serving;

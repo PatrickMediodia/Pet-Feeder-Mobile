@@ -21,6 +21,7 @@ namespace Pet_Feeder_Machine_Problem
         HttpClient client;
         DispenseSlotsAdapter adapter;
         Button addSlotBtn;
+        TextView dispenseMsgTxt;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -30,6 +31,7 @@ namespace Pet_Feeder_Machine_Problem
 
             recyclerView = FindViewById<RecyclerView>(Resource.Id.dispenseSlotsRecView);
             addSlotBtn = FindViewById<Button>(Resource.Id.btnAddSlot);
+            dispenseMsgTxt = FindViewById<TextView>(Resource.Id.dispenseMsgTxt);
 
             RunOnUiThread(async () =>
             {
@@ -59,11 +61,14 @@ namespace Pet_Feeder_Machine_Problem
                 var result = await response.Content.ReadAsStringAsync();
                 if (result.Contains("No slots found"))
                 {
-                    Toast.MakeText(this, "No Available Dispense Slots", ToastLength.Short).Show();
-                    Finish();
+                    dispenseMsgTxt.Visibility = Android.Views.ViewStates.Visible;
+                    recyclerView.Visibility = Android.Views.ViewStates.Gone;
                 }
                 else 
                 {
+                    dispenseMsgTxt.Visibility = Android.Views.ViewStates.Gone;
+                    recyclerView.Visibility = Android.Views.ViewStates.Visible;
+
                     var responseObject = JsonConvert.DeserializeObject<List<DispenseSlot>>(result);
                     recyclerView.SetLayoutManager(new LinearLayoutManager(recyclerView.Context));
                     adapter = new DispenseSlotsAdapter(responseObject, this);
@@ -90,15 +95,19 @@ namespace Pet_Feeder_Machine_Problem
 
                 if (result.Contains("No slots found"))
                 {
-                    Toast.MakeText(this, "No Available Dispense Slots", ToastLength.Short).Show();
-                    Finish();
+                    dispenseMsgTxt.Visibility = Android.Views.ViewStates.Visible;
+                    recyclerView.Visibility = Android.Views.ViewStates.Gone;
                 }
-                else 
+                else
                 {
+                    dispenseMsgTxt.Visibility = Android.Views.ViewStates.Gone;
+                    recyclerView.Visibility = Android.Views.ViewStates.Visible;
+
                     var newData = JsonConvert.DeserializeObject<List<DispenseSlot>>(result);
                     adapter.RefreshItems(newData);
-                    ChangedData();
                 }
+
+                ChangedData();
             }, TaskScheduler.FromCurrentSynchronizationContext());
         }
     }

@@ -70,7 +70,7 @@ namespace Pet_Feeder_Machine_Problem
                     Toast.MakeText(this, "Error", ToastLength.Short).Show();
                 }
             }
-            else 
+            else
             {
                 Toast.MakeText(this, "Serving must not be empty", ToastLength.Short).Show();
             }

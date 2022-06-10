@@ -45,7 +45,7 @@
                 android:layout_marginBottom="20dp"
                 android:scaleType="fitCenter"
                 android:layout_gravity="center_horizontal"
-                android:id="@+id/imageView1" />
+                android:id="@+id/imageView2" />
 
             <Button
                 android:text="ADD DISPENSE SLOT"
@@ -99,6 +99,20 @@
                     android:fontFamily="sans-serif-condensed"
                     android:id="@+id/textView3" />
             </TableRow>
+
+            <TextView
+                    android:text="No Dispense Slots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="25sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAlignment="center"
+                    android:id="@+id/dispenseMsgTxt" />
 
             <android.support.v7.widget.RecyclerView
                 android:minWidth="25px"

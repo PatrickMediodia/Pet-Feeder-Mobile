@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using Pet_Feeder_Machine_Problem.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -85,7 +86,11 @@ namespace Pet_Feeder_Machine_Problem
                 humidityTxt.Text = responseObject.humidity;
                 foodTxt.Text = responseObject.foodLevel;
                 waterTxt.Text = responseObject.waterLevel;
-                timestampTxt.Text = responseObject.timestamp;
+
+                string input = responseObject.timestamp;
+                var timeFromInput = DateTime.ParseExact(input, "yyyy-MM-dd HH:mm:ss", null, DateTimeStyles.None);
+                string timeIn12HourFormatForDisplay = timeFromInput.ToString("MM/dd/yyy hh:mm tt", CultureInfo.InvariantCulture);
+                timestampTxt.Text = timeIn12HourFormatForDisplay;
             }
             else
             {

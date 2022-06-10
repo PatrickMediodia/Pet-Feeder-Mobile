@@ -9,6 +9,7 @@ using System.Net;
 using System.Linq;
 using Android.Content;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Pet_Feeder_Machine_Problem.Adapters
 {
@@ -41,8 +42,15 @@ namespace Pet_Feeder_Machine_Problem.Adapters
         {
             // Replace the contents of the view with that element
             var holder = viewHolder as DispenseSlotsAdapterViewHolder;
-            //holder.TextView.Text = items[position];
-            holder.time_TV.Text = items[position].dispenseTime;
+
+
+            string input = items[position].dispenseTime;
+            var timeFromInput = DateTime.ParseExact(input, "HH:mm:ss", null, DateTimeStyles.None);
+            string timeIn12HourFormatForDisplay = timeFromInput.ToString(
+                "hh:mm tt",
+                CultureInfo.InvariantCulture);
+            holder.time_TV.Text = timeIn12HourFormatForDisplay;
+
             holder.serving_TV.Text = items[position].serving;
 
             holder.imageDel_TV.SetOnClickListener(this);
