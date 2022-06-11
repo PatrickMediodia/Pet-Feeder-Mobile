@@ -70,19 +70,27 @@ namespace Pet_Feeder_Machine_Problem
             string username = usernameTxt.Text;
             string name = nameTxt.Text;
 
-            string url = RESTAPI.url() + $"changeAccountDetails.php?username={username}&name={name}";
 
-            HttpResponseMessage response = await client.GetAsync(url);
-
-            if (response.StatusCode == HttpStatusCode.OK)
+            if (username != "" && name!= "")
             {
-                var result = await response.Content.ReadAsStringAsync();
-                Toast.MakeText(this, result, ToastLength.Long).Show();
-                Finish();
+                string url = RESTAPI.url() + $"changeAccountDetails.php?username={username}&name={name}";
+
+                HttpResponseMessage response = await client.GetAsync(url);
+
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    var result = await response.Content.ReadAsStringAsync();
+                    Toast.MakeText(this, result, ToastLength.Long).Show();
+                    Finish();
+                }
+                else
+                {
+                    Toast.MakeText(this, "Error", ToastLength.Long).Show();
+                }
             }
             else
             {
-                Toast.MakeText(this, "Error", ToastLength.Long).Show();
+                Toast.MakeText(this, "Username and Name fields are required", ToastLength.Short).Show();
             }
         }
     }

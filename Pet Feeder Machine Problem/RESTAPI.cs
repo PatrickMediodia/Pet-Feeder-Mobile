@@ -13,7 +13,7 @@ namespace Pet_Feeder_Machine_Problem
 {
     public class RESTAPI
     {
-        static string IPAddress = "192.168.1.2";
+        static string IPAddress = "192.168.68.116";
         static string directory = "PetFeeder";
 
         public static string url() 
